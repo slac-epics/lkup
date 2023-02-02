@@ -10,7 +10,7 @@ include $(TOP)/configure/CONFIG
 #----------------------------------------------------
 # Create and install (or just install)
 # databases, templates, substitutions like this
-DB_INSTALLS += lkup.db
+DB += lkup.db
 
 #----------------------------------------------------
 # Create and install (or just install)

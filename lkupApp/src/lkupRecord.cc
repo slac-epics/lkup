@@ -1,3 +1,4 @@
+#define USE_TYPED_RSET
 /* lkupRecord.c */
 /* Record support module */
 
@@ -57,11 +58,11 @@ rset lkupRSET = {
 	RSETNUMBER,
 	report,
 	initialize,
-	(RECSUPFUN) init_record,
-	(RECSUPFUN) process,
-	(RECSUPFUN) special,
+	init_record,
+	process,
+	special,
 	get_value,
-	(RECSUPFUN) cvt_dbaddr,
+	cvt_dbaddr,
 	get_array_info,
 	put_array_info,
 	get_units,
