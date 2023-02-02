@@ -1,0 +1,11 @@
+# look-up-table archive list
+$(NAME).NMAX    86400    monitor
+$(NAME).NPTS    86400    monitor
+$(NAME).LABL    86400    monitor
+$(NAME).XVAL    86400    monitor
+$(NAME).YVAL    86400    monitor
+$(NAME).DVAL    86400    monitor
+$(NAME).INIT    86400    monitor
+$(NAME).VAL     86400    monitor
+$(NAME).LVAL    86400    monitor
+

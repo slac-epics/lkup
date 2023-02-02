@@ -1,0 +1,11 @@
+# look-up-table autosave list
+$(NAME).NMAX
+$(NAME).NPTS
+$(NAME).LABL
+$(NAME).XVAL
+$(NAME).YVAL
+$(NAME).DVAL
+$(NAME).INIT
+$(NAME).VAL
+$(NAME).LVAL
+

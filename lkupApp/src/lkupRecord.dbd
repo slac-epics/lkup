@@ -1,0 +1,104 @@
+recordtype(lkup) {
+	include "dbCommon.dbd" 
+	field(VAL,DBF_DOUBLE) {
+		promptgroup(GUI_OUTPUT)
+		special(SPC_MOD)
+	}
+	field(RBV,DBF_DOUBLE) {
+		promptgroup(GUI_INPUTS)
+		special(SPC_NOMOD)
+	}
+	field(IVAL,DBF_SHORT) {
+		prompt("Index Desired")
+		promptgroup(GUI_OUTPUT)
+		special(SPC_MOD)
+	}
+	field(IRBV,DBF_SHORT) {
+		prompt("Index RBV")
+		promptgroup(GUI_INPUTS)
+		special(SPC_NOMOD)
+	}
+	field(LVAL,DBF_STRING) {
+		prompt("Label Desired")
+		promptgroup(GUI_OUTPUT)
+		special(SPC_MOD)
+		size(40)
+	}
+	field(LRBV,DBF_STRING) {
+		prompt("Label RBV")
+		promptgroup(GUI_INPUTS)
+		special(SPC_NOMOD)
+		size(40)
+	}
+	field(OVAL,DBF_SHORT) {
+		prompt("Old Index Desired")
+		special(SPC_NOMOD)
+	}
+	field(ORBV,DBF_STRING) {
+		prompt("Old Label RBV")
+		promptgroup(GUI_INPUTS)
+		special(SPC_NOMOD)
+		size(40)
+	}
+	field(INP,DBF_INLINK) {
+		prompt("Input Specification")
+		promptgroup(GUI_INPUTS)
+		interest(1)
+	}
+	field(OUT,DBF_OUTLINK) {
+		prompt("Output Specification")
+		promptgroup(GUI_OUTPUT)
+		interest(1)
+	}
+	field(NMAX,DBF_SHORT) {
+		prompt("Max No of Data Points")
+		special(SPC_NOMOD)
+		interest(1)
+	}
+	field(NPTS,DBF_SHORT) {
+		prompt("No of Data Points")
+		special(SPC_MOD)
+		interest(1)
+	}
+	field(LABL,DBF_NOACCESS) {
+		prompt("Labels")
+		special(SPC_DBADDR)
+		extra("char *labl")
+		interest(1)
+	}
+	field(XVAL,DBF_NOACCESS) {
+		prompt("Array of X Values")
+		special(SPC_DBADDR)
+		extra("epicsFloat64 *xval")
+		pp(TRUE)
+		interest(1)
+	}
+	field(YVAL,DBF_NOACCESS) {
+		prompt("Array of Y Values")
+		special(SPC_DBADDR)
+		extra("epicsFloat64 *yval")
+		pp(TRUE)
+		interest(1)
+	}
+	field(DVAL,DBF_NOACCESS) {
+		prompt("Delta on X Values")
+		special(SPC_DBADDR)
+		extra("epicsFloat64 *dval")
+		pp(TRUE)
+		interest(1)
+	}
+	field(TWF,DBF_SHORT) {
+		prompt("Advance Index Forward")
+		special(SPC_MOD)
+	}
+	field(TWR,DBF_SHORT) {
+		prompt("Advance Index Reverse")
+		special(SPC_MOD)
+	}
+	field(INIT,DBF_SHORT) {
+		prompt("Initialized Or Not")
+		pp(TRUE)
+		interest(1)
+	}
+}
+

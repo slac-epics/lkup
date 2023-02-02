@@ -1,0 +1,35 @@
+lkup Record R2-0-0 Release Notice
+================================================================================
+
+The look-up table record software in this release is developed to support two
+way look-ups, with interpolation, between the X and Y variables of a strictly
+increasing or decreasing curve.  It is compatible with EPICS base R3-14-12.
+
+It has the following main fields:
+
+INP     inlink              R      input link to read back X
+OUT     outlink             R      output link to drive X
+VAL     double              R/W    desired value of Y
+RBV     double              R      read back value of Y
+LVAL    char[40]            R/W    desired label on Y
+LRBV    char[40]            R      read back label on Y
+NMAX    integer             R      max no of data points
+NPTS    integer             R/W    no of data points
+XVAL    double[NMAX]        R/W    array of X values
+YVAL    double[NMAX]        R/W    array of Y values
+LABL    char  [NMAX][40]    R/W    array of labels
+DVAL    double[NMAX]        R/W    delta on X values (for labeling)
+INIT    integer             R/W    set to "0" when changing NPTS, X/Y/DVAL, LABL
+                                   set to "1" when done changing
+
+An example use case is with a zoom lens, where INP is the RBV field of the zoom
+motor, OUT is the VAL field of the motor, XVAL is an array of motor positions,
+YVAL is the corresponding measured zoom factors, while the optional DVAL and
+LABL are arrays of labels for convenience/quick access.
+
+Modification Log from R1-0-0 to R2-0-0
+======================================
+
+New features:
+    Add index manipulation
+

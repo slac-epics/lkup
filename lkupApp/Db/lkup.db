@@ -1,0 +1,7 @@
+record(lkup, "$(NAME)") {
+  field(INP,  "$(IN)")
+  field(OUT,  "$(OUT)")
+  field(NMAX, "$(NMAX)")
+  field(NPTS, "$(NMAX)")
+}
+
